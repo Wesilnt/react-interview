@@ -15,6 +15,7 @@
 1. 子组件 pure（ 更新 与 性能 ）
 2.  子组件 itemStyle 优化 （ props 传对象的问题 ）
 3. 子组件 handleClick 优化 （同上 及 事件处理的经验 ）
+4. 组件拆分，使频繁更新的date不影响list.map和props比对
 
 ### hooks 相关
 
