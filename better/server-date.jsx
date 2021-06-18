@@ -26,6 +26,7 @@ export class ServerDate extends Component {
         fetch({url: "getServerDate"}).then((res) => {
             const {data: date, success} = res;
             if (!success) return
+            if(!this.IntervalID) return;
             this.setState({date});
         });
     }

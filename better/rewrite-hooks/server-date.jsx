@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { fetch } from "@/fetch";
 
 export const ServerDate = () => {
   const [date, setDate] = useState("");
+  const IntervalID = useRef("");
 
   const intervalServerDate = async () => {
     const fetchDate = () => {
       fetch({ url: "getServerDate" }).then((res) => {
         const { data: date, success } = res;
         if (!success) return;
+        if (!IntervalID.current) return;
         setDate(date);
       });
     };
@@ -19,9 +21,10 @@ export const ServerDate = () => {
   };
 
   useEffect(() => {
-    const IntervalID = intervalServerDate();
+    IntervalID.current = intervalServerDate();
     return () => {
-      clearInterval(IntervalID);
+      clearInterval(IntervalID.current);
+      IntervalID.current = "";
     };
   }, []);
 
