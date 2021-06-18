@@ -8,7 +8,7 @@
 5. code为 undefined/null 返回 undefined/null字符串,   （隐式转换以及valueOf和toString的区别）
 6. filter、map -> reduce （数组）
 7. key （react key） 
-8. setInterval 组件卸载未做清除
+8. setInterval 组件卸载未做清除，扩展：如果接口卡住，或者延迟较大，该如何推迟后面的获取时间，而不累加函数调用
 
 ### 优化 （组件设计、需求复杂性判断、性能度量）
 

@@ -35,7 +35,7 @@ export interface IListItem {
 
 // 3.   展示服务器时间，展示数据列表
 
-// 将列表的每个子项item拆分成单个组件 ListItem,且展示 ListItem 的 name_code,在 ListItem 上绑定事件： 打印item.id,且高亮点击的子项。高亮的类名为 highlight-item，
+// 将列表的每个子项item拆分成单个组件 ListItem,且展示 ListItem 的 name_code,在 ListItem 上绑定事件： 打印item,且高亮点击的子项。高亮的类名为 highlight-item，
 
 // 须有一样式声明传入ListItem，样式为
 // {
